@@ -2,24 +2,210 @@
     Import Font
 ----------------------- */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+
+/* Colors
+header-nav- #2482e0
+login-Button- #F73859
+*/
+
+
 /* ---------------------
         Utilities
 ----------------------- */
+
 body{
     font-family: 'Poppins', sans-serif;
+    margin: 0;
 }
 
 /* ---------------------
         Header
+    (nav Section)
+----------------------- */
+.head-container{
+    padding: 42px 140px;
+    background-color:#2482e0 ;
+}
+.menu-nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 60px;
+    
+}
+.menu ul{
+    list-style: none;
+}
+.menu ul li{
+    display: inline;
+    margin-right: 36px;
+}
+.menu ul li a{
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 16px;
+}
+.menu ul li a:hover{
+    color: #F8B726;
+}
+/* Buttons  */
+.login-button a,.watch a,.watch-now-link{
+    text-decoration: none;
+    color: #ffffff;
+    padding: 10px 24px;
+    background-color:#F73859 ;
+    font-size: 16px;
+    box-shadow: 0 2px 2px #f7385860;
+}
+.login-button a:hover,.watch a:hover,.watch-now-link:hover{
+    background-color:#1E1E1E ;
+    transition: .5s;
+}
+.login-icon{
+font-size: 17px;
+margin-right: 10px;
+}
+.watch-icon{
+    font-size: 17px;
+margin-left: 10px;
+}
+/* ---------------------
+        Header
+    (Player Banner Section)
 ----------------------- */
 
+.player-banner{
+    display: flex;
+  
+}
+.banner-title h2{
+    font-size: 64px;
+    font-weight: 700;
+    color: #ffffff;
+}
+.banner-title h2 span{
+    color:#FFA800;
+}
+.kick-football{
+    position: relative;
+}
+
+.player-kick{
+    width: 100%;
+    animation: kick 2s ease-in infinite reverse ;
+}
+.ball{
+    width: 70px;
+    position: absolute;
+    left: 0;
+    animation: ball 2s 1s ease-out infinite reverse ;
+}
 /* ---------------------
         Main
 ----------------------- */
+.player-card-grid{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-column-gap: 30px;
+    grid-row-gap: 27px;
+    padding: 70px 140px;
+    width: 1050px;
+}
+.player-card{
+    width: 300px;
+    padding: 15px;
+    box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.15);;
+}
+.player-image img{
+    width: 100%;
+}
+.player-name{
+    font-size: 28px;
+    color: #18191F;
+    margin: 10px 0;
+}
+.player-detail{
+    font-size: 16px;
+    color: #6C6C6C;
+}
+/* watch now  */
+.watch-now{
+    display: flex;
+    padding: 0 100px;
+    justify-content: space-between;
+    align-items: center;
+}
+.watch-info h2{
+font-size: 48px;
+color: #0A0826;
+}
+.watch-info p{
+    font-size: 16px;
+    color: #6C6C6C;
+}
+.watch-info{
+    margin-bottom: 25px;
+}
 
+.match{
+    width: 567px;
+    padding: 20px;
+    margin-left: 20px;
+}
 /* ---------------------
-        Main
+        footer
 ----------------------- */
+
+.footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 150px;
+}
+.logo img{
+    width: 480px;
+}
+.social-icon .fab{
+    font-size: 32px;
+    margin: 0 5px;
+    color: #7c7c7c;
+}
+.social-icon .fab:hover{
+    color: #F73859;
+    cursor: pointer;
+    transition: .5s;
+}
+.copyright p{
+    font-size: 18px;
+}
+/* ---------------------
+       Animation
+----------------------- */
+@keyframes kick {
+   0%{
+    transform: translate(0, 0);
+   }
+   
+   50%{
+    transform: translate(30px, 50px);
+   }
+   100%{
+    transform: translate(0, 0);
+   }
+}
+@keyframes ball {
+    0%{
+        transform: translate(50px, 105px);
+    }
+    
+    50%{
+        transform: translate(0, 0);
+    }
+    100%{
+        transform: translate(50px, 105px);
+    }
+ }
 /* ---------------------
         Responsive
 ----------------------- */
