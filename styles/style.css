@@ -18,6 +18,9 @@ body{
     font-family: 'Poppins', sans-serif;
     margin: 0;
 }
+footer{
+    margin-top: 150px;
+}
 
 /* ---------------------
         Header
@@ -57,6 +60,7 @@ body{
     background-color:#F73859 ;
     font-size: 16px;
     box-shadow: 0 2px 2px #f7385860;
+    border-radius: 50px;
 }
 .login-button a:hover,.watch a:hover,.watch-now-link:hover{
     background-color:#1E1E1E ;
@@ -92,11 +96,11 @@ margin-left: 10px;
 }
 
 .player-kick{
-    width: 100%;
+    width: 500px;
     animation: kick 2s ease-in infinite reverse ;
 }
 .ball{
-    width: 70px;
+    width: 58px;
     position: absolute;
     left: 0;
     animation: ball 2s 1s ease-out infinite reverse ;
@@ -104,13 +108,18 @@ margin-left: 10px;
 /* ---------------------
         Main
 ----------------------- */
+.player-card-section{
+    display: flex;
+    justify-content: center;
+    margin: 70px 0;
+    width: 100%;
+}
 .player-card-grid{
     display: grid;
     grid-template-columns: repeat(3,1fr);
     grid-column-gap: 30px;
     grid-row-gap: 27px;
-    padding: 70px 140px;
-    width: 1050px;
+    
 }
 .player-card{
     width: 300px;
@@ -129,12 +138,26 @@ margin-left: 10px;
     font-size: 16px;
     color: #6C6C6C;
 }
-/* watch now  */
+
+
+/*--------------
+   watch now  
+   -------------*/
+
+.watch-match{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 50px;
+}
 .watch-now{
     display: flex;
-    padding: 0 100px;
-    justify-content: space-between;
-    align-items: center;
+    width: 85%;
+    
+   
+}
+.watch-now-info,.watch-image{
+    padding: 10px;
 }
 .watch-info h2{
 font-size: 48px;
@@ -149,19 +172,207 @@ color: #0A0826;
 }
 
 .match{
-    width: 567px;
-    padding: 20px;
-    margin-left: 20px;
+    width: 100%;
+    
+    
 }
+/* ---------------------
+        Scoreboard
+----------------------- */
+.scoreboard{
+    width: 100%;
+    background-color: rgba(0, 255, 255, 0.281);
+    padding: 30px 0 50px 0;
+    
+}
+.scoreboard>h2{
+    text-align: center;
+    font-size: 2em;
+}
+.score-banner{
+    display: flex;
+    justify-content:center;
+    
+}
+.team-side{
+    display: flex;
+    flex-direction: column;
+    
+    align-items: center;
+    width: 33%;
+    
+}
+.score{
+    font-size: 3em;
+    color: #111111;
+    margin: 5px 0;
+}
+.team-name{
+    font-size: 36px;
+    color: #ffffff;
+    margin: 0;
+}
+.left{
+    background-color: #FBD649;
+}
+.right{
+    background-color: #6cceff;
+    
+}
+.team-logo{
+    width: 25%;
+}
+
+/* Best Player Tournament  */
+.best-player-heading h2{
+    text-align: center;
+    font-size: 2em;
+    margin:40px 0;
+}
+.best-players{
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+    width: 100%;
+}
+.best-player-grid{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-column-gap: 30px;
+    grid-row-gap: 27px;
+    
+}
+.best-player-card{
+    width: 300px;
+    height: 300px;
+    padding: 15px;
+    box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.15);
+  
+    position: relative;
+    
+}
+.messi{
+    background-image: url("../images/players/player-2.png");
+      
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.neymar{
+    background-image: url("../images/players/player-1.png");
+      
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.mbappe{
+    background-image: url("../images/players/player-12.png");
+      
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.best-player-info{
+    position: absolute;
+    top: 270px;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background-color: #fbd7499d;
+    
+    
+}
+.best-player-name{
+    font-size: 28px;
+    color: #18191F;
+    margin: 10px 0;
+    text-align: center;
+}
+.best-player-detail{
+    font-size: 16px;
+    color: #080808;
+    text-align: justify;
+    visibility: hidden;
+    padding: 10px;
+    height: 0;
+    
+}
+.best-player-card:hover .best-player-info{
+    top: 100px;
+    transition: .8s ease-in-out;
+    height: 230px;
+    
+    
+}
+.best-player-card:hover .best-player-detail{
+    visibility: visible;
+    
+    transition: .4s ;
+    transition-delay: .5s;
+    
+    
+}
+
 /* ---------------------
         footer
 ----------------------- */
+/* ---------------------
+        newsletter
+----------------------- */
+.newsletter{
+    display: flex;
+    justify-content: center;
+}
+.newsletter-area{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-image: linear-gradient(to top,#076ad3b0 ,#0e2781d5);
+    width: 80%;
+    border-radius: 5px;
+}
+.newsletter-heading h2{
+    font-size: 2em;
+    color: #ffffff;
+    margin: 15px 0 5px 0;
+}
+.newsletter-heading p{
+    font-size: 16px;
+    color: #ffffff;
+}
+.newsletter-form form{
+    display: flex;
+    
+    align-items: center;
+    
+}
+.newsletter-email,.newsletter-button{
+    
+    border:none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin-bottom: 10px;
+    
+}
+.newsletter-email{
+    width: 300px;
+    height: 40px;
+    font-size: 16px;
+}
+.newsletter-button{
+    width: 100px;
+    height: 50px;
+    cursor: pointer;
+    background-color: #F2A91A;
+    font-size: 16px;
+}
 
+
+/* Footer section  */
 .footer{
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 150px;
+    margin-top: 50px;
+
 }
 .logo img{
     width: 480px;
@@ -182,6 +393,7 @@ color: #0A0826;
 /* ---------------------
        Animation
 ----------------------- */
+
 @keyframes kick {
    0%{
     transform: translate(0, 0);
@@ -209,3 +421,173 @@ color: #0A0826;
 /* ---------------------
         Responsive
 ----------------------- */
+
+@media only screen and (max-width:688px ){
+    .head-container{
+        padding: 20px 10px;
+    }
+    .menu-nav{
+        flex-wrap: wrap;
+        text-align: center;
+    }
+    .menu{
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .login-button{
+       margin: 0 auto;
+    }
+    .player-banner{
+        flex-wrap: wrap;
+    }
+    .banner-title{
+        margin-bottom: 80px;
+        text-align: center;
+    }
+    .player-kick{
+        width: 95%;
+    }
+    .ball{
+        width: 10%;
+        animation: ball 2s 1s ease-out infinite reverse ;
+
+    }
+    /* player card section  */
+    .player-card-grid{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    /* watch match */
+    .watch-match{
+        width: 100%;
+    }
+    .watch-now{
+        flex-direction: column;
+        align-items: center;
+
+    }
+    .watch-now-info{
+        margin-bottom: 20px;
+        text-align: center;
+    }
+    /* scoreboard */
+    .score-banner{
+        flex-direction: column;
+        align-items: center;
+    }
+    .team-side{
+        width: 80%;
+    }
+    /* Best players  */
+    .best-player-grid{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    /* Newsletter  */
+    .newsletter-area{
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .newsletter-form form{
+        flex-direction: column;
+    }
+    .newsletter-email{
+        width: 100%;
+    }
+    /* Footer  */
+  
+  .logo img{
+      width: 90%;
+  }
+
+  @keyframes ball {
+    0%{
+        transform: translate(50px, 88px);
+    }
+    
+    50%{
+        transform: translate(0, 0);
+    }
+    100%{
+        transform: translate(50px, 88px);
+    }
+ }
+}
+@media only screen and (min-width:687px) and (max-width: 1000px){
+    .head-container{
+        padding: 20px 10px;
+    }
+    .menu-nav{
+        flex-wrap: wrap;
+        text-align: center;
+    }
+    .menu{
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .login-button{
+       margin: 0 auto;
+    }
+    .player-banner{
+        flex-wrap: wrap;
+    }
+    .banner-title{
+        margin-bottom: 80px;
+        text-align: center;
+    }
+    .player-kick{
+        width: 95%;
+    }
+    .ball{
+        width: 100px;
+
+    }
+    /* player card section  */
+    .player-card-grid{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    /* watch match */
+    .watch-match{
+        width: 100%;
+    }
+    .watch-now{
+        flex-direction: column;
+        align-items: center;
+
+    }
+    .watch-now-info{
+        margin-bottom: 20px;
+        text-align: center;
+    }
+    /* scoreboard */
+    .score-banner{
+        flex-direction: column;
+        align-items: center;
+    }
+    .team-side{
+        width: 80%;
+    }
+    /* Best players  */
+    .best-player-grid{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    /* Newsletter  */
+    .newsletter-area{
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .newsletter-form form{
+        flex-direction: column;
+    }
+    .newsletter-email{
+        width: 100%;
+    }
+    /* Footer  */
+  
+  .logo img{
+      width: 90%;
+  }
+  .social-icon .fab{
+    font-size: 40px;
+  }
+}
